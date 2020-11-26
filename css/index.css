@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+* {
+	border:0;
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+a, a:link, a:active, a:visited, a:focus, a:hover {
+	text-decoration:none;
+}
+
+
+.wrap {
+	width:100%;
+	background:#EEE;
+}
+.wrap>div {
+	width:50%;
+	margin:0.8rem auto 0.8rem auto;
+	background:#FFF;
+}
+
+/* historyCal */
+#historyCal {
+	
+}
+#hc-time {
+	font-size:2.4rem;
+}
+#hc-btn {
+	padding:4px 8px;
+	background:#777;
+	font-size:1.6rem;
+	color:#FFF;
+}
