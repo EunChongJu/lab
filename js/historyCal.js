@@ -23,6 +23,14 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 		"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
 	];
 	
+	var months = [
+		"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+	];
+	
+	var shortMonth = [
+		"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+	];
+	
 	// 이번 해가 윤년인가? 윤년(true)이면 2월에는 29일까지 있고, 평년(false)은 28일까지 있다.
 	var flagLeapMonth = false;
 	
@@ -279,8 +287,7 @@ var hc = new historyCal(1, 1, start, end, 1);	// 여기서 distane는 무조건 
 var count = 1901;
 
 function hcStart() {
-//	setInterval(hcShow, 400);
-	setInterval(hcShow, 10);
+	setInterval(hcShow, 400);
 }
 
 function hcShow() {
