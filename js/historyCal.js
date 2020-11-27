@@ -11,9 +11,9 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 	};
 	
 	var now = {
-		"Y": 1926,	// 연도
-		"M": 12,	// 월
-		"D": 25,	// 일
+		"Y": 1996,	// 연도
+		"M": 1,	// 월
+		"D": 20,	// 일
 		"W": 6,		// 요일 (일요일이 0번, 월요일이 1번이고 토요일이 6임)
 		"L": false,	// 윤년 여부 (true는 윤년이고, false는 평년임)
 	};
@@ -91,7 +91,7 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 			"year": this.getYear(),
 			"month": this.getMonth(),
 			"day": this.getDay(),
-			"dayOfTheWeek": this.getDOTW()
+			"dayOfTheWeek": dayOfTheWeeks[this.getDOTW()],
 		};
 	};
 	
@@ -140,6 +140,8 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 			this.prevMonth();
 			now.D = this.getDayLength(now.M);
 		}
+		
+		this.prevDOTW();
 	}
 	this.nextDay = function() {
 		if (now.D == monthLength) {
@@ -149,6 +151,8 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 		else {
 			now.D++;
 		}
+		
+		this.nextDOTW();
 	}
 	
 	this.prevDOTW = function() {
@@ -295,7 +299,7 @@ function hcShow() {
 	hc.nextDay();
 	
 	var today = hc.getDate();
-	var time = today.year + '년 ' + today.month + '월 ' + today.day + '일';
+	var time = today.year + '년 ' + today.month + '월 ' + today.day + '일 ' + today.dayOfTheWeek;
 	document.getElementById('hc-time').innerHTML = time;
 	// 그러고 보니까 멈추는게 없네??
 }
