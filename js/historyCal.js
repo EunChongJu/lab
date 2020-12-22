@@ -14,7 +14,7 @@ var historyCal = function(format, type, start, end, distance, perSecond) {
 		"Y": 1996,	// 연도
 		"M": 1,	// 월
 		"D": 20,	// 일
-		"W": 6,		// 요일 (일요일이 0번, 월요일이 1번이고 토요일이 6임)
+		"W": 0,		// 요일 (일요일이 0번, 월요일이 1번이고 토요일이 6임)
 		"L": false,	// 윤년 여부 (true는 윤년이고, false는 평년임)
 	};
 	
